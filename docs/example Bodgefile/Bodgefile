@@ -1,0 +1,88 @@
+{
+  "windows": [
+    //component
+    {
+      "id": 0, //global id of the component
+      "type": "Window",
+      "properties": {
+        //different depending on the component type
+        "minimumSize": {
+          "width": "800px",
+          "height": "600px"
+        },
+        "size": {
+          "width": "1280px",
+          "height": "720px"
+        },
+        "title": "Hello World"
+      },
+      "children": [
+        {
+          "id": 1,
+          "type": "Center",
+          "properties": {
+            "size": {
+              "width": "100%",
+              "height": "100%"
+            }
+          },
+          "children": [
+            {
+              "id": 2,
+              "type": "VStack", //column
+              "properties": {
+                "size": {
+                  "width": "400px",
+                  "height": "400px"
+                },
+                "align": "center", //like align-items in css
+                "gap": "30px" //value specific to HStack and Vstack
+              },
+              "children": [
+                {
+                  "id": 3,
+                  "type": "Header",
+                  "propeties": {
+                    "text": "Hello World 👋"
+                  }
+                },
+                {
+                  "id": 4,
+                  "type": "Text",
+                  "propeties": {
+                    "text": "👇 You can click on any of these two buttons! `👇"
+                  }
+                },
+                {
+                  "id": 5,
+                  "type": "HStack", //row
+                  "properties": {
+                    "width": "100%",
+                    "justify": "space-between" // like justify-content in css
+                  },
+                  "children": [
+                    //Buttons will have functions hooked up to them in javascript(something like getComponent(6).addEventListener("click", ()=>{}); )
+                    {
+                      "id": 6,
+                      "type": "Button",
+                      "properties": {
+                        "text": "Read the docs"
+                      }
+                    },
+                    {
+                      "id": 7,
+                      "type": "Button",
+                      "properties": {
+                        "text": "Exit"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
