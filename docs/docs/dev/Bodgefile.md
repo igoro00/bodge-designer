@@ -1,11 +1,50 @@
+---
+sidebar_position: 1
+---
+
+# Bodgefile
+
+Bodgefile to plik bedący w root'cie folderu otwartego przez użytkownika. Jest on w formacie json i określa całą strukturę UI aplikacji.
+
+## Komponenty
+
+Głównym założeniem designu są komponenty. To jest przykładowy komponent:
+
+```json
+{
+    "id": 0,
+    "type": "Window",
+    "properties": {
+        "minimumSize": {
+            "width": "800px",
+            "height": "600px"
+        },
+        "size": {
+            "width": "1280px",
+            "height": "720px"
+        },
+        "title": "Hello World"
+    },
+    "children": []
+}
+```
+
+| Nazwa właściwości | Typ | Opis |
+| --- | --- | --- |
+| id | int | globalbe id obiektu. Identyfikuje komponent np. podczas podpinania funkcji | 
+| type | string | Predefiniowane typy komponentów. Są tłumaczone do natywnych komponentów GTK i Qt. Zapisane w PascalCase. |
+| properties | object | W zależności od typu obiektu, komponent, może mieć różne właściwości. Najczęściej są to wybrane właściwości podobne do css. Więcej o właściwościach dla poszczególnych typów komponentów dowiesz się tutaj. | 
+| children | Array<object\> | Tablica komponentów, które mają znajdować się w środku tego komponentu. Chociaż nie wszystkie komponenty obsługują children, każdy komponent musi mieć tablicę children(jeśli komponent nie obsługuje dzieci to tabela ma być pusta). |
+
+## Przykładowy program hello world
+
+```json
 {
   "windows": [
-    //component
     {
-      "id": 0, //global id of the component
+      "id": 0,
       "type": "Window",
       "properties": {
-        //different depending on the component type
         "minimumSize": {
           "width": "800px",
           "height": "600px"
@@ -29,14 +68,14 @@
           "children": [
             {
               "id": 2,
-              "type": "VStack", //column
+              "type": "VStack",
               "properties": {
                 "size": {
                   "width": "400px",
                   "height": "400px"
                 },
-                "align": "center", //like align-items in css
-                "gap": "30px" //value specific to HStack and Vstack
+                "align": "center",
+                "gap": "30px"
               },
               "children": [
                 {
@@ -55,13 +94,12 @@
                 },
                 {
                   "id": 5,
-                  "type": "HStack", //row
+                  "type": "HStack",
                   "properties": {
                     "width": "100%",
-                    "justify": "space-between" // like justify-content in css
+                    "justify": "space-between"
                   },
                   "children": [
-                    //Buttons will have functions hooked up to them in javascript(something like getComponent(6).addEventListener("click", ()=>{}); )
                     {
                       "id": 6,
                       "type": "Button",
@@ -86,3 +124,4 @@
     }
   ]
 }
+```
