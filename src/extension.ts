@@ -4,7 +4,7 @@ import { DesignerPanel } from './DesignerPanel';
 import { compile } from './compiler';
 
 export function activate(context: vscode.ExtensionContext) {
-	console.log('Congratulations, your extension "bodge" is now active!');
+	console.log('Congratulations, your extension "bodge-designer" is now active!');
 	context.subscriptions.push(
 		vscode.commands.registerCommand('bodge.compile', compile)
 	);

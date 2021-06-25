@@ -6,7 +6,7 @@ module.exports = {
   title: 'Bodge',
   tagline: 'Quickly bodge native multiplatform GUIs together using JavaScript!',
   url: 'https://igoro00.github.io',
-  baseUrl: '/bodge/',
+  baseUrl: '/bodge-designer/',
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
@@ -27,7 +27,7 @@ module.exports = {
           label: 'Docs',
         },
         {
-          href: 'https://github.com/igoro00/bodge',
+          href: 'https://github.com/igoro00/bodge-designer',
           label: 'GitHub',
           position: 'right',
         },
@@ -67,7 +67,7 @@ module.exports = {
           items: [
             {
               label: 'GitHub',
-              href: 'https://github.com/igoro00/bodge',
+              href: 'https://github.com/igoro00/bodge-designer',
             },
           ],
         },
@@ -87,7 +87,7 @@ module.exports = {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           editUrl:
-            'https://github.com/igoro00/bodge/edit/master/docs/',
+            'https://github.com/igoro00/bodge-designer/edit/master/docs/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),

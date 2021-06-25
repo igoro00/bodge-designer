@@ -1,6 +1,6 @@
 {
-	"name": "bodge",
-	"displayName": "bodge",
+	"name": "bodge-designer",
+	"displayName": "Bodge Designer",
 	"description": "Quickly bodge native multiplatform GUIs together using javascript",
 	"version": "0.0.1",
 	"license": "MIT",
@@ -14,10 +14,6 @@
 		"onCommand:bodge.compile",
 		"onCommand:bodge.designer"
 	],
-	"languages":[{
-		"id":"jsonc",
-		"extensions":["Bodgefile"]
-	}],
 	"main": "./dist/extension.js",
 	"contributes": {
 		"commands": [
@@ -62,7 +58,6 @@
 		"webpack-cli": "^4.7.0"
 	},
 	"dependencies": {
-		"fs-extra": "^10.0.0",
-		"jsonc-simple-parser": "^2.2.0"
+		"fs-extra": "^10.0.0"
 	}
 }
